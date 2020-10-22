@@ -6,7 +6,7 @@ class Movie extends Component {
 
     static propTypes = {
         title: PropTypes.string.isRequired,
-        poster: PropTypes.string
+        poster: PropTypes.string.isRequired
     }
 
     render(){
@@ -24,6 +24,10 @@ function MoviePoster({poster}){
     return (
         <img alt="" src={poster} />
     )
+}
+
+MoviePoster.propTypes = {
+    poster: PropTypes.string.isRequired
 }
 
 export default Movie;
