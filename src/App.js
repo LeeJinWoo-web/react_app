@@ -12,7 +12,6 @@ class App extends Component {
   }
 
   componentDidMount(){
-    console.log("Did Mount")
       setTimeout(() => {
          this.setState({
           movies : [
