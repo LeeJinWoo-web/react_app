@@ -4,11 +4,13 @@ import Movie from './Movie'
 
 class App extends Component {
 
-  state = {
-  }
+    // Render: componentWillMount() -> render() -> componentDidMount()
+  // Update componentWillReceiveProps() -> shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate()
+
+  state = {}
 
   componentWillMount(){
-    console.log("Will Mount")
+  
   }
 
   componentDidMount(){
@@ -45,7 +47,7 @@ class App extends Component {
   render() {
     console.log("Render")
     return (
-      <div className="App">
+      <div className={this.state.movies ? "App" : "App--loading"}>
         {this.state.movies ? this._renderMovies() : "Loading"}
       </div>
     );
